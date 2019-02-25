@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<!--- Image Slider -->
+
+<div class="jumbotron" style="padding-bottom: 50px;">
+
+    <div class="container" style="padding-top:170px; padding-bottom: 220px; text-align: left;">
+
+        <h1 class="display-3" style="color: #fff;  filter: brightness(1.75); text-shadow: 1px 1px 10px #000;">Make accurate decisions with real datasets.</h1>
+        <h4 style="color: #fff; text-shadow: 5px 5px 10px #000; padding-top: 20px;">Journey Analytics Platform transforms unused traffic data
+            into a city-wide network of productive<br> information and insights<br>
+            Join our movement and contact us to be included in beta testing</h4>
+        <a href="#" class="btn btn-success btn-lg" style="text-transform:uppercase; display: inline-block; margin-top: 50px; ">Click here to learn more</a>
+
+    </div>
+
+</div>
+
+<!-- How it works -->
+
+<hr>
+
+<!--- Cards -->
+
+<div class="container-fluid padding">
+
+    <div class="row" style="background: #ebebeb;">
+
+        <div class="col-md-4 wow fadeInUp delay-2s" data-wow-duration="3s">
+
+            <div class="card">
+
+                <img class="card-img-top" >
+
+                <div class="card-body">
+                    <h4 class="card-title">Accurate Data</h4>
+                    <p class="card-text text-justify">Realistic Decisions - click on the chart below!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <a href="#" class="btn btn-outline-secondary">Show Map</a>
+                </div>
+                <div id="pieChart"></div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 wow fadeInUp" data-wow-duration="3s">
+
+            <div class="card">
+
+                <img class="card-img-top" >
+
+                <div class="card-body">
+                    <h4 class="card-title">AI toolsets</h4>
+                    <p class="card-text text-justify">To solve Victoria's traffic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <a href="#" class="btn btn-outline-secondary">Contact Us</a>
+                </div>
+                <div id="barChart"></div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 wow fadeInUp" data-wow-duration="3s">
+
+            <div class="card">
+
+
+                <div class="card-body">
+                    <h4 class="card-title">Ease of use</h4>
+                    <p class="card-text text-justify">Built for users by users</p>
+                    <a href="#" class="btn btn-outline-secondary">See Prices</a>
+                </div>
+                <img  SRC="http://adilmoujahid.com/images/data-viz-talkingdata.gif" class="card-img-top" >
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--- Meet the team -->
+
+<div class="container-fluid">
+
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <hr>
+            <h1 class="display-6">Why professionals choose<br>Journey Analytics</h1>
+            <hr>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+                        
+    <div class="row">
+
+      <div class="col-md-4">
+        <h2>Get real time freeway insights with Managed Motorway Analytics</h2>
+        <p>You can sign up online to try out our real time analytics! There's no reservation required - <br>You'll have access to fast insights into delays and more</p>
+      </div>
+
+      <div class="col-md-4">
+        <h2>Explore Arterial Road Congestion with Unusual Congestion 2</h2>
+        <p>Get a detailed perspective on what intersection is worth exploring.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h2>And much more</h2>
+        <p>Machine learning, Fault Detection and many other tools.</p>
+      </div>
+
+    </div>
+
+</div>
+
+<hr style="padding-bottom:10px; ">
+
+<!-- ========= Footer ======== -->
+
+<footer id="footer" style="background-color: #ebebeb;">
+
+    <div class="container">
+
+
+        <div class="footer-widgets-wrap clearfix">
+
+            <div class="row text-center">
+
+                <div class="col-md-4">
+
+                    <div class="widget clearfix">
+
+                        <hr class="light">
+                        <p>We believe in <strong>Universal</strong>, <strong>Creative</strong> &amp;
+                            <strong>Flexible</strong> Analytics.</p>
+                        <hr class="light">
+
+                        <address><p><strong>Headquarters:</strong><br>
+                            Melbourne, Australia<br></p>
+                        </address>
+
+                        <abbr title="Email Address">
+                            <p style="margin-bottom:0px;"><strong>Email:</strong></p></abbr>
+                        <p style="margin-bottom:0px;">Michael.Holborn@roads.vic.gov.au</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="widget widget_links clearfix">
+
+                        <hr class="light">
+                        <h5><b>Journey Analytics</b></h5>
+                        <hr class="light">
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="widget subscribe-widget clearfix">
+
+                        <hr class="light">
+                        <h5 class="nobottommargin">VicRoads</h5>
+                        <hr class="light">
+
+                        <h5><strong>Subscribe</strong> to Our Newsletter to get updates and early access:</h5>
+
+                        <div class="widget-subscribe-form-result">
+
+                            <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post"
+                                  class="nobottommargin">
+                                <div class="input-group divcenter">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="icon-email2"></i></div>
+                                    </div>
+                                    <input type="email" id="widget-subscribe-form-email"
+                                           name="widget-subscribe-form-email"
+                                           class="form-control required email" placeholder="Enter your Email">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-success" type="submit">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.11/dc.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.11/dc.min.js.map"></script>-->
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+
+
+
+
+
+    {% endblock %}
