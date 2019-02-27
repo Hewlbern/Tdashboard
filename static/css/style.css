@@ -8,7 +8,7 @@
     fill: black;
 
 }
-
+#mapid { height: 180px; }
 
 #pieChart {
 	position:relative;

@@ -33,6 +33,12 @@ def calculate_percentage(val, total):
 
     return percent
 
+
+@app.route('/analytics')
+
+def analytics():
+    return render_template('analytics.html')
+
 @app.route('/Map')
 
 def Map():
@@ -103,6 +109,8 @@ def get_barchart_data():
         barChartData.append(eachBarChart)
 
     return jsonify(barChartData)
+
+
 
 
 

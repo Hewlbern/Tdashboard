@@ -1,0 +1,103 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          144.829434,
+          -37.825233
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "Area": "Combined Entry MVT on Grieve Pde, West Gate Fwy North Ramps, Grieve Pde Byp Start EB between Grieve ",
+        "IDnumber": "2541EL_P0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          144.829502,
+          -37.825234
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "Area": "Combined Entry MVT on Grieve Pde, West Gate Fwy North Ramps, Grieve Pde Byp Start EB between Grieve ",
+        "IDnumber": "2541EL_P1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          144.881846,
+          -37.732708
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "Area": "Combined Entry MVT on Keilor Rd WB between Keilor Rd And Coinston Ave & Mcnamara Ave Calder Fwy Nort",
+        "IDnumber": "1917EL_P0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          144.881781,
+          -37.732701
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "Area": "Combined Entry MVT on Keilor Rd WB between Keilor Rd And Coinston Ave & Mcnamara Ave Calder Fwy Nort",
+        "IDnumber": "1917EL_P1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          144.881337,
+          -37.732571
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "Area": "Combined Entry MVT on Keilor Rd WB between Keilor Rd And Coinston Ave & Mcnamara Ave Calder Fwy Nort",
+        "IDnumber": "1917M0_P0"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          144.88129,
+          -37.732541
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "Area": "Combined Entry MVT on Keilor Rd WB between Keilor Rd And Coinston Ave & Mcnamara Ave Calder Fwy Nort",
+        "IDnumber": "1917M0_P1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          144.880801,
+          -37.73238
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "Area": "Combined Entry MVT on Keilor Rd WB between Keilor Rd And Coinston Ave & Mcnamara Ave Calder Fwy Nort",
+        "IDnumber": "1917M1_P0"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}
