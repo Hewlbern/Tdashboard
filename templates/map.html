@@ -54,194 +54,39 @@
         </div>
       </form>
     </div>
-    <div id="app-maparea"></div>
+    <div id="mapid" style="height:1858px; border-right: 1px solid #d7d7d7; position: fixed; top: 0px;width: 67%;z-index: 0;cursor: -webkit-grab;cursor: -moz-grab;background: #fff;
+    color: #404040;color: rgba(0,0,0,.75);outline: 0;overflow: hidden;-ms-touch-action: none;
+    box-sizing: border-box;"></div>
 
-    <div id="app-sidebar">
-      <div id="chart-01"></div>
-      <br>
-      <div id="chart-02"></div>
-      <br>
-      <div id="chart-03"></div>
-    </div>
 
   </div>
 
-  <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
+
 <script>
-var client = new Keen({
-  projectId: "5368fa5436bf5a5623000000",
-  readKey: "3f324dcb5636316d6865ab0ebbbbc725224c7f8f3e8899c7733439965d6d4a2c7f13bf7765458790bd50ec76b4361687f51cf626314585dc246bb51aeb455c0a1dd6ce77a993d9c953c5fc554d1d3530ca5d17bdc6d1333ef3d8146a990c79435bb2c7d936f259a22647a75407921056"
-});
-
-Keen.ready(function(){
-
-  // ----------------------------------------
-  // Sample one
-  // ----------------------------------------
-  var pageviews_timeline = new Keen.Query("count", {
-    eventCollection: "pageviews",
-    interval: "hourly",
-    groupBy: "user.device_info.browser.family",
-    timeframe: {
-      start: "2014-05-04T00:00:00.000Z",
-      end: "2014-05-05T00:00:00.000Z"
-    }
-  });
-  client.draw(pageviews_timeline, document.getElementById("chart-01"), {
-    chartType: "areachart",
-    title: false,
-    height: 250,
-    width: "auto",
-    chartOptions: {
-      chartArea: {
-        height: "85%",
-        left: "5%",
-        top: "5%",
-        width: "80%"
-      },
-      isStacked: true
-    }
-  });
-  // ----------------------------------------
-  //  End sample one
-  // ----------------------------------------
 
 
-  // ----------------------------------------
-  // Sample two
-  // ----------------------------------------
-  var pageviews_static = new Keen.Query("count", {
-    eventCollection: "pageviews",
-    groupBy: "user.device_info.browser.family",
-    timeframe: {
-      start: "2014-05-01T00:00:00.000Z",
-      end: "2014-05-05T00:00:00.000Z"
-    }
-  });
-  client.draw(pageviews_static, document.getElementById("chart-02"), {
-    chartType: "piechart",
-    title: false,
-    height: 250,
-    width: "auto",
-    chartOptions: {
-      chartArea: {
-        height: "85%",
-        left: "5%",
-        top: "5%",
-        width: "100%"
-      },
-      pieHole: .4
-    }
-  });
-  // ----------------------------------------
-  // End sample two
-  // ----------------------------------------
+	var mymap = L.map('mapid').setView([-37.735018, 144.894947], 13);
 
-  // ----------------------------------------
-  // Sample three
-  // ----------------------------------------
-  var impressions_timeline = new Keen.Query("count", {
-    eventCollection: "impressions",
-    groupBy: "ad.advertiser",
-    interval: "hourly",
-    timeframe: {
-      start: "2014-05-04T00:00:00.000Z",
-      end: "2014-05-05T00:00:00.000Z"
-    }
-  });
-  client.draw(impressions_timeline, document.getElementById("chart-03"), {
-    chartType: "columnchart",
-    title: false,
-    height: 250,
-    width: "auto",
-    chartOptions: {
-      chartArea: {
-        height: "75%",
-        left: "10%",
-        top: "5%",
-        width: "60%"
-      },
-      bar: {
-        groupWidth: "85%"
-      },
-      isStacked: true
-    }
-  });
-  // ----------------------------------------
-  // End sample three
-  // ----------------------------------------
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(mymap);
 
-  // ----------------------------------------
-  // Sample four
-  // ----------------------------------------
-  var impressions_timeline_by_device = new Keen.Query("count", {
-    eventCollection: "impressions",
-    groupBy: "user.device_info.device.family",
-    interval: "hourly",
-    timeframe: {
-      start: "2014-05-04T00:00:00.000Z",
-      end: "2014-05-05T00:00:00.000Z"
-    }
-  });
-  client.draw(impressions_timeline_by_device, document.getElementById("chart-04"), {
-    chartType: "columnchart",
-    title: false,
-    height: 250,
-    width: "auto",
-    chartOptions: {
-      chartArea: {
-        height: "75%",
-        left: "10%",
-        top: "5%",
-        width: "60%"
-      },
-      bar: {
-        groupWidth: "85%"
-      },
-      isStacked: true
-    }
-  });
-  // ----------------------------------------
-  // End sample four
-  // ----------------------------------------
+	L.GeoJSON(myGeojsonData).addTo(mymap);
 
-  // ----------------------------------------
-  // Sample five
-  // ----------------------------------------
-  var impressions_timeline_by_country = new Keen.Query("count", {
-    eventCollection: "impressions",
-    groupBy: "user.geo_info.country",
-    interval: "hourly",
-    timeframe: {
-      start: "2014-05-04T00:00:00.000Z",
-      end: "2014-05-05T00:00:00.000Z"
-    }
-  });
-  client.draw(impressions_timeline_by_country, document.getElementById("chart-05"), {
-    chartType: "columnchart",
-    title: false,
-    height: 250,
-    width: "auto",
-    chartOptions: {
-      chartArea: {
-        height: "75%",
-        left: "10%",
-        top: "5%",
-        width: "60%"
-      },
-      bar: {
-        groupWidth: "85%"
-      },
-      isStacked: true
-    }
-  });
-  // ----------------------------------------
-  // End sample five
-  // ----------------------------------------
 
-});
+	var circle = L.circle([-37.735018, 144.894947], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 50
+}).addTo(mymap);
+
+
+
+
 </script>
-  <!-- Project Analytics -->
-  <script src="{{ url_for('static',filename='lib/js/keen-analytics.js') }}"></script>
-</body>
     {% endblock %}
